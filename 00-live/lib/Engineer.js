@@ -9,6 +9,13 @@ class Engineer extends Employee {
     super.role = "Engineer";
     }
 
+    getGithub(id) {
+        return this.github;
+    }
+
+    getRole(id) {
+        return this.role;
+    }
 }
 
 module.exports = Engineer;

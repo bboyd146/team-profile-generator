@@ -27,5 +27,10 @@ describe("Employee class", () => {
     expect(employee.getName(1)).toBe('Dave');
   })
 
+  it ('should have a getId() function that can be called after instanstiation', () => {
+    const employee = new Employee('Dave', 1, 'Dave@gmail.com');
+    expect(employee.getId('Dave')).toBe(1);
+  })
+
 
 });

@@ -36,4 +36,8 @@ describe("Employee class", () => {
     const employee = new Employee('Dave', 1, 'Dave@gmail.com');
     expect(employee.getEmail('Dave')).toBe('Dave@gmail.com');
   })
+  it ('should have a getRole() function that can be called after instanstiation', () => {
+    const employee = new Employee('Dave', 1, 'Dave@gmail.com');
+    expect(employee.getRole('Dave')).toBe('Employee');
+  })
 });

@@ -14,7 +14,7 @@ getEmail () {
 return this.email
 }
 getRole () {
-return 
+return this.role
 }
 }
 

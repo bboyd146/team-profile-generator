@@ -9,11 +9,11 @@ class Engineer extends Employee {
     super.role = "Engineer";
     }
 
-    getGithub(id) {
+    getGithub() {
         return this.github;
     }
 
-    getRole(id) {
+    getRole() {
         return this.role;
     }
 }

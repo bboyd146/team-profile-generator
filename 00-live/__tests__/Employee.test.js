@@ -19,6 +19,6 @@ describe("Employee class", () => {
 
   it ('should have an email property that can be set on instanstiation', () => {
     const employee = new Employee('Dave', 1, 'Dave@gmail.com');
-    expect(employee.email).toBe('Dave@gmail.com')
+    expect(employee.email).toBe('Dave@gmail.com');
   })
 });

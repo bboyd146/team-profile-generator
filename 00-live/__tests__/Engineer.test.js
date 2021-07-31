@@ -16,4 +16,9 @@ describe('Engineer class', () => {
         const engineer = new Engineer(1, 'brad', 'boy@gmail.com', 'boy');
         expect(engineer.getGithub(1)).toBe('boy');
     })
+
+    it('should have a getRole() function that can be called after instantiation', () => {
+        const engineer = new Engineer(1, 'brad', 'boy@gmail.com', 'boy');
+        expect(engineer.getRole(1)).toBe('Engineer');
+    })
 })

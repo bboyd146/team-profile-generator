@@ -5,6 +5,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
 const employees = [];
+newEmployee();
 
 // TODO: Create an array of questions for user input
 function newEmployee() { 
@@ -66,15 +67,16 @@ function newEmployee() {
                     newMember = new Manager(name, id, email, roleInfo);
                 }
                 employees.push(newMember);
-                addHtml(newMember)
-                .then(function() {
+
+                console.log(newMember)
+
                     if (moreMembers === "yes") {
                         newEmployee();
                     }
                 });
                 
             });
-        });
+
 }
 
         function writeToFile() {

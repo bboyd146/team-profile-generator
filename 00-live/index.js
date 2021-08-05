@@ -8,7 +8,7 @@ const employees = [];
 newEmployee();
 
 // TODO: Create an array of questions for user input
-function newEmployee() { 
+function newEmployee() {
     inquirer.prompt([
         {
             type: "input",
@@ -35,7 +35,7 @@ function newEmployee() {
             message: "Enter team member's email address",
             name: "email"
         }])
-        .then(function({name, role, id, email}) {
+        .then(function ({ name, role, id, email }) {
             let roleInfo = "";
             if (role === "Engineer") {
                 roleInfo = "GitHub username";
@@ -57,30 +57,36 @@ function newEmployee() {
                 ],
                 name: "moreMembers"
             }])
-            .then(function({roleInfo, moreMembers}) {
-                let newMember;
-                if (role === "Engineer") {
-                    newMember = new Engineer(name, id, email, roleInfo);
-                } else if (role === "Intern") {
-                    newMember = new Intern(name, id, email, roleInfo);
-                } else {
-                    newMember = new Manager(name, id, email, roleInfo);
-                }
-                employees.push(newMember);
+                .then(function ({ roleInfo, moreMembers }) {
+                    let newMember;
+                    if (role === "Engineer") {
+                        newMember = new Engineer(name, id, email, roleInfo);
+                    } else if (role === "Intern") {
+                        newMember = new Intern(name, id, email, roleInfo);
+                    } else {
+                        newMember = new Manager(name, id, email, roleInfo);
+                    }
+                    employees.push(newMember);
 
-                console.log(newMember)
-
+                    console.log(employees)
                     if (moreMembers === "yes") {
                         newEmployee();
+                    } else {
+                        quit()
                     }
                 });
-                
-            });
+
+        });
 
 }
 
-        function writeToFile() {
-            fs.writeFile('README-generated.md', markdown(), (err) => {
-                err ? console.error(err) : markdown; console.log('Your README.md has been generated');
-            });
-        }
+function writeToFile() {
+    fs.writeFile('README-generated.md', markdown(), (err) => {
+        err ? console.error(err) : markdown; console.log('Your README.md has been generated');
+    });
+}
+
+function quit() {
+    console.log("Team Profile Generated");
+    process.exit(0);
+}

@@ -12,7 +12,7 @@
             <table class="table is-bordered">
                 <tbody>
                     <tr>
-                        <td>id:</td>
+                        <td>id:[data]</td>
                     </tr>
                     <tr>
                         <td>email:<a href = "mailto: abc@example.com">[email]</a></td>

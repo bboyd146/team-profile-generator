@@ -18,7 +18,7 @@
                     <td>email:<a href = "mailto: abc@example.com">[email]</a></td>
                     </tr>
                     <tr>
-                        <td>school:</td>
+                        <td>school:[data]</td>
                     </tr>
                 </tbody>
             </table>

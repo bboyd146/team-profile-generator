@@ -18,7 +18,7 @@ npm install
 
 ## Usage 
 npm start -> to begin prompt.. Afterwards follow the prompt until satisfied  
-![alt text](assets/images/)
+![alt text](assets/team.png)
 
 ## License 
 (https://opensource.org/licenses/MIT)  
@@ -43,3 +43,6 @@ Link to Github: (https://github.com/bboyd146)
 
 Email: braddboyd5@gmail.com  
 Instructions on how to contact: click email link and insert subject.  
+
+## Link to Video
+https://drive.google.com/file/d/1XRTsqmLZvl10qjhT1hjFqCCrJ4UaDAie/view

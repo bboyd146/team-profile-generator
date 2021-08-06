@@ -100,14 +100,14 @@ const html =
 return html;
 }
 
-function internC () {
+function internC (employees) {
     return `<div class="card">
     <header class="media-content has-background-link">
         <p class="title">
-        ${Intern.name}
+        ${employees.name}
         </p>
         <p class="subtitle">
-        ${Intern.role}
+        ${employees.role}
         </p>
     </header>
     <div class="card-content">
@@ -115,13 +115,13 @@ function internC () {
             <table class="table is-bordered">
                 <tbody>
                     <tr>
-                        <td>id:${Intern.id}</td>
+                        <td>id:${employees.id}</td>
                     </tr>
                     <tr>
-                    <td>email:<a href = "mailto: ${Intern.email}">${Intern.email}</a></td>
+                    <td>email:<a href = "mailto: ${employees.email}">${employees.email}</a></td>
                     </tr>
                     <tr>
-                        <td>school:${Intern.school}</td>
+                        <td>school:${employees.school}</td>
                     </tr>
                 </tbody>
             </table>
@@ -132,14 +132,14 @@ function internC () {
     `;
 }
 
-function managerC () {
+function managerC (employees) {
 return `<div class="card">
 <header class="media-content has-background-link">
     <p class="title">
-        ${Manager.name}
+        ${employees.name}
     </p>
     <p class="subtitle">
-        ${Manager.role}
+        ${employees.role}
     </p>
 </header>
 <div class="card-content">
@@ -147,13 +147,13 @@ return `<div class="card">
         <table class="table is-bordered">
             <tbody>
                 <tr>
-                    <td>id: ${Manager.id}</td>
+                    <td>id: ${employees.id}</td>
                 </tr>
                 <tr>
-                <td>email:<a href = "mailto: ${Manager.email}">${Manager.email}</a></td>
+                <td>email:<a href = "mailto: ${employees.email}">${employees.email}</a></td>
                 </tr>
                 <tr>
-                    <td>office number: ${Manager.officeNumber}</td>
+                    <td>office number: ${employees.officeNumber}</td>
                 </tr>
             </tbody>
         </table>

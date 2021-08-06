@@ -77,7 +77,7 @@ function newEmployee() {
                     } else {
                     
                         writeToFile(employees)
-                        quit();
+                        // quit();
                     }
                 });
         });
@@ -87,6 +87,7 @@ function newEmployee() {
 function writeToFile(employees) {
     const html = generatedTeam(employees)
     console.log(html)
+    writeAsync('./dist/g-index.html', html).then(res => quit())
     // fs.writeFile('./dist/g-index.html', html, (err) => {
     //     err ? console.error(err) : markdown; console.log('Your team has been generated');
     // });

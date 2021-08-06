@@ -35,7 +35,8 @@ npm start -> to begin prompt.. Afterwards follow the prompt until satisfied
 
 
 ## Tests
-tests here
+run npm test
+passing tests in video link below
 
 ## Questions
 Github username: bboyd146  

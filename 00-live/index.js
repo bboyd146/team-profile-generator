@@ -3,6 +3,9 @@ const fs = require('fs');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const { generatedTeam } = require('./src/templates');
+const { promisify } = require('util');
+const writeAsync = promisify(fs.writeFile);
 
 const employees = [];
 newEmployee();
@@ -72,18 +75,21 @@ function newEmployee() {
                     if (moreMembers === "yes") {
                         newEmployee();
                     } else {
-                        quit()
+                    
+                        writeToFile(employees)
+                        quit();
                     }
                 });
-
         });
 
 }
 
-function writeToFile() {
-    fs.writeFile('README-generated.md', markdown(), (err) => {
-        err ? console.error(err) : markdown; console.log('Your README.md has been generated');
-    });
+function writeToFile(employees) {
+    const html = generatedTeam(employees)
+    console.log(html)
+    // fs.writeFile('./dist/g-index.html', html, (err) => {
+    //     err ? console.error(err) : markdown; console.log('Your team has been generated');
+    // });
 }
 
 function quit() {

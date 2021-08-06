@@ -66,15 +66,15 @@ function finishHtml() {
 
 
 
-function engineerC (){
-return
+function engineerC (employees) {
+const html =
 `<div class="card">
     <header class="media-content has-background-link">
         <p class="title">
-            ${Engineer.name}
+            ${employees.name}
         </p>
         <p class="subtitle">
-            ${Engineer.role}
+            ${employees.role}
         </p>
     </header>
     <div class="card-content">
@@ -82,13 +82,13 @@ return
             <table class="table is-bordered">
                 <tbody>
                     <tr>
-                        <td>id:${Engineer.id}</td>
+                        <td>id:${employees.id}</td>
                     </tr>
                     <tr>
-                        <td>email:<a href = "mailto: ${Engineer.email}">${Engineer.email}</a></td>
+                        <td>email:<a href = "mailto: ${employees.email}">${employees.email}</a></td>
                     </tr>
                     <tr>
-                        <td>github: <a href="https://github.com/${Engineer.github}">${Engineer.github}</a></td>
+                        <td>github: <a href="https://github.com/${employees.github}">${employees.github}</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -97,6 +97,7 @@ return
 
 </div>
 `;
+return html;
 }
 
 function internC () {
@@ -163,4 +164,4 @@ return `<div class="card">
 `;
 }
 
-module.exports 
+module.exports = { generatedTeam : (employees) => createHTML(employees)}
